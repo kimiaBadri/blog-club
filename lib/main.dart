@@ -52,6 +52,6 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        home: StoryPage());
+        home: NewArticle());
   }
 }
