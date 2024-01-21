@@ -15,13 +15,21 @@ class StoryPage extends StatelessWidget {
         Container(
           width: double.infinity,
           height: 690,
-          decoration: BoxDecoration(
-            color: Colors.white,
+          child: ClipRRect(
             borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(15),
-              bottomRight: Radius.circular(15),
+              bottomLeft: Radius.circular(20),
+              bottomRight: Radius.circular(20),
+            ),
+            child: FittedBox(
+              fit: BoxFit.fill,
+              child: Image.asset(
+                  'assets/images/stories/karl-magnuson-85J99sGggnw-unsplash.jpg'),
             ),
           ),
+        ),
+        ElevatedButton(
+          onPressed: () {},
+          child: Text('data'),
         ),
       ],
     );
