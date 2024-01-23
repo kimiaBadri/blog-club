@@ -15,48 +15,8 @@ class StoryPage extends StatelessWidget {
           decoration: BoxDecoration(color: blue),
         ),
         _getImageContainer(),
-        Padding(
-          padding: const EdgeInsets.only(top: 100, left: 44),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _getStoryBox(),
-              SizedBox(
-                width: 16,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Jasmine Levin',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontFamily: 'AR',
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 12,
-                  ),
-                  Text(
-                    '4m ago',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontFamily: 'AR',
-                      fontWeight: FontWeight.w300,
-                      color: Colors.white60,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                width: 140,
-              ),
-              Icon(Icons.exit_to_app_sharp)
-            ],
-          ),
-        ),
+        _getChangeStoryContainer(),
+        _getStoryRow(),
         _getBlurContainer(),
         _getBottum(),
         Positioned(
@@ -72,7 +32,7 @@ class StoryPage extends StatelessWidget {
               Text(
                 '450K',
                 style: TextStyle(color: Colors.white, fontSize: 16),
-              )
+              ),
             ],
           ),
         )
@@ -100,14 +60,20 @@ class StoryPage extends StatelessWidget {
 
   Widget _getBottum() {
     return Positioned(
-      top: 770,
-      child: Row(
+      top: 755,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          Image.asset('assets/images/icons/Angle-Up.png'),
+          SizedBox(
+            height: 4,
+          ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-                minimumSize: Size(130, 50),
+                minimumSize: Size(130, 45),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(15),
                 ),
                 backgroundColor: Colors.white),
             onPressed: () {},
@@ -115,7 +81,7 @@ class StoryPage extends StatelessWidget {
               child: Text(
                 'Read More',
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 15,
                   fontFamily: 'AR',
                   fontWeight: FontWeight.bold,
                   color: blue,
@@ -186,8 +152,8 @@ class StoryPage extends StatelessWidget {
 
   Widget _getStoryBox() {
     return Container(
-      width: 68,
-      height: 68,
+      width: 58,
+      height: 58,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(
           Radius.circular(24),
@@ -198,6 +164,128 @@ class StoryPage extends StatelessWidget {
           Radius.circular(20),
         ),
         child: Image.asset('assets/images/stories/story_4.jpg'),
+      ),
+    );
+  }
+
+  Widget _getStoryRow() {
+    return Padding(
+      padding: const EdgeInsets.only(top: 100, left: 44, right: 44),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _getStoryBox(),
+          SizedBox(
+            width: 16,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Jasmine Levin',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontFamily: 'AR',
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(
+                height: 12,
+              ),
+              Text(
+                '4m ago',
+                style: TextStyle(
+                  fontSize: 14,
+                  fontFamily: 'AR',
+                  fontWeight: FontWeight.w300,
+                  color: Colors.white60,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            width: 100,
+          ),
+          Image.asset('assets/images/icons/Close.png')
+        ],
+      ),
+    );
+  }
+
+  Widget _getChangeStoryContainer() {
+    return Padding(
+      padding: EdgeInsets.only(top: 64),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            width: 93,
+            height: 4,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(
+                Radius.circular(40),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 8,
+          ),
+          ClipRRect(
+            child: BackdropFilter(
+              filter: ImageFilter.blur(
+                sigmaX: 14,
+                sigmaY: 14,
+              ),
+              child: Container(
+                width: 93,
+                height: 4,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color.fromRGBO(255, 255, 255, 0.1),
+                      Color.fromRGBO(255, 255, 255, 0.1)
+                    ],
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(40),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 8,
+          ),
+          ClipRRect(
+            child: BackdropFilter(
+              filter: ImageFilter.blur(
+                sigmaX: 14,
+                sigmaY: 14,
+              ),
+              child: Container(
+                width: 93,
+                height: 4,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color.fromRGBO(255, 255, 255, 0.1),
+                      Color.fromRGBO(255, 255, 255, 0.1)
+                    ],
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(40),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
