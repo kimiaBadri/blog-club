@@ -8,35 +8,37 @@ class StoryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.topCenter,
-      children: [
-        Container(
-          decoration: BoxDecoration(color: blue),
-        ),
-        _getImageContainer(),
-        _getChangeStoryContainer(),
-        _getStoryRow(),
-        _getBlurContainer(),
-        _getBottum(),
-        Positioned(
-          top: 770,
-          right: 36,
-          child: Column(
-            children: [
-              Icon(
-                CupertinoIcons.heart_fill,
-                color: Colors.red,
-                size: 40,
-              ),
-              Text(
-                '450K',
-                style: TextStyle(color: Colors.white, fontSize: 16),
-              ),
-            ],
+    return Scaffold(
+      body: Stack(
+        alignment: Alignment.topCenter,
+        children: [
+          Container(
+            decoration: BoxDecoration(color: blue),
           ),
-        )
-      ],
+          _getImageContainer(),
+          _getChangeStoryContainer(),
+          _getStoryRow(),
+          _getBlurContainer(),
+          _getBottum(),
+          Positioned(
+            top: 770,
+            right: 36,
+            child: Column(
+              children: [
+                Icon(
+                  CupertinoIcons.heart_fill,
+                  color: Colors.red,
+                  size: 40,
+                ),
+                Text(
+                  '450K',
+                  style: TextStyle(color: Colors.white, fontSize: 16),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 
