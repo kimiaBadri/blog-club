@@ -1,7 +1,7 @@
 import 'package:blog_club/screens/home_page_screen.dart';
+import 'package:blog_club/screens/login_screen.dart';
 import 'package:blog_club/screens/onboarding_screen.dart';
 import 'package:blog_club/screens/profile_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -62,7 +62,7 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> getLayout() {
     return <Widget>[
       HomePageScreen(),
-      HomePageScreen(),
+      LoginScreen(),
       ProfileScreen(),
       OnBoardingScreen(),
       OnBoardingScreen(),

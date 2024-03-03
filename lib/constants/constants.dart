@@ -8,7 +8,9 @@ final Color darkGrey = HexColor('#7B8BB2');
 final Color blue = HexColor('#376AED');
 final Color blue2 = HexColor('#49B0E2');
 final Color blue3 = HexColor('#9CECFB');
+final Color blue4 = HexColor('#2151CD');
 final Color splashScreen = HexColor('#BBC6D7');
+final Color darkBlueText2 = HexColor('#0D253C');
 
 class StoryImageConstants {
   static final List<String> imagePaths = [

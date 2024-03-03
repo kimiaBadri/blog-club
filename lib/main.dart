@@ -1,7 +1,5 @@
 import 'package:blog_club/constants/constants.dart';
-import 'package:blog_club/screens/login_screen.dart';
 import 'package:blog_club/screens/main_screen.dart';
-import 'package:blog_club/screens/story_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
