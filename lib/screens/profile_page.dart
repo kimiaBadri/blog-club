@@ -126,6 +126,21 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
           ),
+          Positioned(
+              bottom: 400,
+              left: 110,
+              right: 110,
+              child: Container(
+                height: 32,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 24,
+                      color: Colors.grey.withOpacity(0.9),
+                    )
+                  ],
+                ),
+              )),
           Container(
             margin: EdgeInsets.only(top: 386),
             width: 231,
@@ -134,6 +149,110 @@ class ProfileScreen extends StatelessWidget {
               color: blue,
               borderRadius: BorderRadius.all(
                 Radius.circular(15),
+              ),
+            ),
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: blue4,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(15),
+                      ),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          '52',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontFamily: 'AR',
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                        SizedBox(
+                          height: 4,
+                        ),
+                        Text(
+                          'post',
+                          style: TextStyle(
+                              fontSize: 14,
+                              fontFamily: 'AR',
+                              fontWeight: FontWeight.normal,
+                              color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        '250',
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontFamily: 'AR',
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      SizedBox(
+                        height: 4,
+                      ),
+                      Text(
+                        'following',
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontFamily: 'AR',
+                            fontWeight: FontWeight.normal,
+                            color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        '4.5k',
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontFamily: 'AR',
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                      SizedBox(
+                        height: 4,
+                      ),
+                      Text(
+                        'followers',
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontFamily: 'AR',
+                            fontWeight: FontWeight.normal,
+                            color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 500),
+            height: 350,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(32),
+                topRight: Radius.circular(32),
               ),
             ),
           )
