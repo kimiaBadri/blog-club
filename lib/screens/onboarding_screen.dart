@@ -1,5 +1,5 @@
 import 'package:blog_club/constants/constants.dart';
-import 'package:blog_club/screens/home_page_screen.dart';
+import 'package:blog_club/screens/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -87,7 +87,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                             Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: ((context) {
-                                  return HomePageScreen();
+                                  return LoginScreen();
                                 }),
                               ),
                             );

@@ -65,6 +65,7 @@ flutter:
     - assets/images/icons/
     - assets/images/posts/large/
     - assets/images/posts/small/
+    - assets/images/posts/profile/
     - assets/images/stories/
 
   # An image asset can refer to one or more resolution-specific "variants", see

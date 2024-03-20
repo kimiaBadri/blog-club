@@ -1,4 +1,6 @@
 import 'package:blog_club/constants/constants.dart';
+import 'package:blog_club/screens/home_page_screen.dart';
+import 'package:blog_club/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -113,11 +115,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(
                           height: 37,
                         ),
-                        _getTextField('Username',null, negahban1),
+                        _getTextField('Username', null, negahban1),
                         SizedBox(
                           height: 32,
                         ),
-                        _getTextField('Password', Icon(Icons.visibility), negahban2),
+                        _getTextField(
+                            'Password', Icon(Icons.visibility), negahban2),
                       ],
                     ),
                   ),
@@ -138,7 +141,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Fotgot your password?',
+                        'Forgot your password?',
                         style: Theme.of(context).textTheme.headline5,
                       ),
                       SizedBox(
@@ -180,7 +183,13 @@ class _LoginScreenState extends State<LoginScreen> {
               borderRadius: BorderRadius.circular(12),
             ),
             backgroundColor: blue),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) {
+              return MainScreen();
+            },
+          ));
+        },
         child: Center(
           child: Text(
             'LOGIN',
@@ -195,42 +204,41 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-
-Widget _getTextField(String label, [Icon? suffixIcon, FocusNode? focusNode]) {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      Padding(
-        padding: const EdgeInsets.only(right: 40),
-        child: TextField(
-          obscureText: obscureText,
-          focusNode: focusNode,
-          decoration: InputDecoration(
-            suffixIcon: suffixIcon == null
-                ? null
-                : GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        obscureText = !obscureText;
-                      });
-                    },
-                    child: Icon(obscureText
-                        ? Icons.visibility
-                        : Icons.visibility_off),
-                  ),
-            suffixStyle: TextStyle(color: blue),
-            labelText: label,
-            labelStyle: TextStyle(
-              color: focusNode?.hasFocus ?? false ? Colors.black : Colors.grey,
-              fontSize: focusNode?.hasFocus ?? false ? 20 : 16,
+  Widget _getTextField(String label, [Icon? suffixIcon, FocusNode? focusNode]) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(right: 40),
+          child: TextField(
+            obscureText: obscureText,
+            focusNode: focusNode,
+            decoration: InputDecoration(
+              suffixIcon: suffixIcon == null
+                  ? null
+                  : GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          obscureText = !obscureText;
+                        });
+                      },
+                      child: Icon(obscureText
+                          ? Icons.visibility
+                          : Icons.visibility_off),
+                    ),
+              suffixStyle: TextStyle(color: blue),
+              labelText: label,
+              labelStyle: TextStyle(
+                color:
+                    focusNode?.hasFocus ?? false ? Colors.black : Colors.grey,
+                fontSize: focusNode?.hasFocus ?? false ? 20 : 16,
+              ),
             ),
           ),
-        ),
-      )
-    ],
-  );
-}
-
+        )
+      ],
+    );
+  }
 }
  
   //               suffixStyle: TextStyle(color: blue),

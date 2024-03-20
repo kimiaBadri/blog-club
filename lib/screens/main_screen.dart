@@ -65,7 +65,7 @@ class _MainScreenState extends State<MainScreen> {
       LoginScreen(),
       ProfileScreen(),
       OnBoardingScreen(),
-      OnBoardingScreen(),
+      ProfileScreen(),
     ];
   }
 }

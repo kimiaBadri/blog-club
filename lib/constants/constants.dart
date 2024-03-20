@@ -71,6 +71,20 @@ class PostTextConstants {
   ];
 }
 
+class MyPostHeaderTexts {
+  static final List<String> texts = [
+    'BIG DATA',
+    'UX DESIGN',
+  ];
+}
+
+class MyPostBodyTexts {
+  static final List<String> texts = [
+    'Why Big Data Needs Thick Data?',
+    'Step design sprint for UX beginner',
+  ];
+}
+
 List<OnBoardingItem> get onBoardingItems {
   List<OnBoardingItem> items = [];
   for (var i = 0; i < 4; i++) {

@@ -21,7 +21,7 @@ class HomePageScreen extends StatelessWidget {
               child: _getPostList(),
             ),
             SliverPadding(
-              padding: EdgeInsets.fromLTRB(0, 10, 0, 32),
+              padding: EdgeInsets.fromLTRB(0, 0, 0, 32),
               sliver: SliverToBoxAdapter(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 40),
@@ -45,25 +45,10 @@ class HomePageScreen extends StatelessWidget {
               child: _getNews(),
             ),
             SliverToBoxAdapter(
-              child: SizedBox(height: 20),
+              child: SizedBox(height: 10),
             ),
             SliverToBoxAdapter(
               child: _getNews(),
-            ),
-            SliverToBoxAdapter(
-              child: SizedBox(height: 20),
-            ),
-            SliverToBoxAdapter(
-              child: _getNews(),
-            ),
-            SliverToBoxAdapter(
-              child: SizedBox(height: 20),
-            ),
-            SliverToBoxAdapter(
-              child: _getNews(),
-            ),
-            SliverToBoxAdapter(
-              child: SizedBox(height: 20),
             ),
           ],
         ),
@@ -76,11 +61,10 @@ class HomePageScreen extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-              blurStyle: BlurStyle.normal,
-              color: Color(0xaa0D253C),
-              offset: Offset(0, 4),
-              blurRadius: 4,
-              spreadRadius: 0)
+              blurRadius: 10,
+              offset: Offset(-2, 10),
+              spreadRadius: 0.5,
+              color: backgroundColor)
         ],
         color: Colors.white,
         borderRadius: BorderRadius.all(
@@ -105,15 +89,36 @@ class HomePageScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('BIG DATA'),
+              Text(
+                'BIG DATA',
+                style: TextStyle(
+                    fontFamily: 'AB',
+                    color: blue,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w700),
+              ),
               SizedBox(
                 height: 10,
               ),
-              Text('Why Big Data Needs'),
+              Text(
+                'Why Big Data Needs',
+                style: TextStyle(
+                    fontFamily: 'AR',
+                    color: Colors.black,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w700),
+              ),
               SizedBox(
                 height: 4,
               ),
-              Text('Thick Data?')
+              Text(
+                'Thick Data?',
+                style: TextStyle(
+                    fontFamily: 'AR',
+                    color: Colors.black,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w700),
+              )
             ],
           ),
         ],
